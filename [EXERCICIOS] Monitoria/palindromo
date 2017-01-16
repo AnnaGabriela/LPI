@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main() {
+    
+    int s[5], i;
+    
+    for (i=0; i<5; i++){
+        printf("Digite o %d elemento:\t", i+1);
+        scanf("%d", &s[i]);
+    }
+    
+    if ((s[0] == s[4] && s[1] == s[3]) || s[0] == s[1] == s[2] == s[3] == s[4]) {
+        printf("\nEh um palindromo\n\n");
+    }
+    
+    else {
+        printf("\nNão eh um palindromo\n\n");
+    }
+    
+
+    return 0;
+    
+}

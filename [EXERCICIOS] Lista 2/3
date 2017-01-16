@@ -1,0 +1,62 @@
+/* 3. Escreva um programa em C para imprimir uma figura segundo o modelo abaixo. Para isso, o usuário deve entrar com um número N ímpar maior ou igual a 3 e menor ou igual a 15.
+*/
+
+#include<stdio.h>
+#include<stdlib.h>
+
+/*
+ Deve imprimir o caracter quando:
+ * base  i== 1;
+ * base  i == base;
+ * diagonal   i == j;
+ * diagonal   i + j == base + 1;
+ */
+
+void ampulheta (int n)
+{
+    int base = n + 2, i, j;
+    for (i=1; i <= base; i++)
+    {
+        
+        for (j=1; j <= base; j++)
+        {
+            
+            if (i == 1 || i == base || i == j || i + j == base + 1)
+            {
+                printf(" * ");
+            }
+            else
+            {
+                printf("   ");
+            }
+        }
+        
+        printf("\n");
+        
+    }
+}
+
+int main ()
+{
+   int i;
+   do {
+       int n;
+    printf ("insira o n:\n");
+    scanf ("%d", &n);
+    
+    if (n%2 != 0 && n>=3 && n<=15)
+    {
+        ampulheta(n);
+        i=0;
+    }
+    
+    else if (n%2 == 0 || n < 3 || n > 15)
+    {
+        printf("voce deve digitar um n ímpar, maior ou igual a tres, menor ou igual a 15\n\n");
+        i=1;
+    }
+        
+   } while (i==1);
+    
+    return 0;
+}

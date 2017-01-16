@@ -1,0 +1,37 @@
+//
+//  main.c
+//  Lista de Exercícios #1
+//
+//  Created by Anna on 06/09/15.
+//  Copyright (c) 2015 Anna Gabriela Carvalho. All rights reserved.
+//
+
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+    int num, resto1, resto2;
+    setlocale(LC_ALL, "Portuguese");
+    printf("Descubra se um número é divisível por 3 ou 9\n(OBS: Digite um número positivo menor que 100)\n");
+    scanf ("%d", &num);
+    
+    resto1 = num % 3;
+    resto2 = num % 9;
+    
+    if (num>100 || num<0) {
+        printf("Erroo! Digite um número natural até 100");
+    }
+    else {
+        if (resto2>0 && resto1==0) {
+            printf("Não é divisível por 9. Porém é divisível por 3");
+        }
+        if (resto2==0) {
+            printf("Esse número é divisível por 3 e por 9");
+        }
+        if  (resto1>0){
+            printf("Esse número não é divisível nem por 3, nem por 9");
+        }
+    }
+    
+        return 0;
+}

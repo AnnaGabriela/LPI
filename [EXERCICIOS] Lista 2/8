@@ -1,0 +1,10 @@
+/*
+8. Modifique o código abaixo, substituindo o comando switch pelo operador ternário de condicional.
+switch (_choice) {
+case '1': vencedor = jogo4x4x4(); break; case '2': vencedor = jogo4x4x4(); break; case '3': vencedor = jogo5x5x5(); break;
+}
+*/
+
+
+
+    _choice<3 ? vencedor = jogo4x4x4 : vencedor = jogo5x5x5;

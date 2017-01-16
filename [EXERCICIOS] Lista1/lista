@@ -1,0 +1,23 @@
+                                                    Lista de Exercícios
+
+1)  Escreva um programa que verifique se um número entre 0 e 100 é primo.
+
+ 
+
+2)  Pergunte ao usuário sua data de nascimento, verifique se é uma data correta, informando o erro (dia, mês ou ano) até que ele digite uma data válida e calcule sua idade.
+
+ 
+
+3)  Dado um número natural n menor que 100, lido do teclado,
+
+    a) Verifique se n é divisível por 3 e por 9.
+    b) Informe o ano de nascimento de quem tem idade n.
+    c) Descubra o dia e o mês do n-ésimo dia de um ano não bissexto.
+    d) Mostre a hora com minutos e segundos, após terem passado n² segundos da meia-noite.
+    e) Encontre o maior inteiro menor que a raiz quadrada de n.
+    f) Imprima n nos formatos binário e hexadecimal.
+    g) Desenhe um triangulo de base n usando a letra ‘O’ e espaços. Se n for par, será um trapézio de base superior 2.
+    h) Descubra quais são os n números ímpares consecutivos cuja soma é igual a n³.
+    i) Imprima os n primeiros elementos da sequência de Fibonacci, a partir do terceiro, calculando a razão áurea (Þ : Phi - código ASCII 232) entre os dois últimos elementos. Ex: 2 Þ = 2.0000000, 3 Þ = 1.5000000, 5 Þ = 1.6666667, 8 Þ = 1.6000000, 13 Þ = 1.6250000, 21 Þ = 1.6153846,...
+    j) Calcule o valor da soma 1/n + 2/(n-1) + 3/(n-2)+ ... + (n-2)/3 + (n-1)/2 + n/1.
+ 

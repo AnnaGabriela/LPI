@@ -1,0 +1,53 @@
+/*
+10. Escreva um programa em C que leia a idade de 2 homens e 2 mulheres (considere que a idade dos homens será sempre diferente, assim como das mulheres). Calcule e escreva a soma das idades do homem mais velho com a mulher mais nova, e o produto das idades do homem mais novo com a mulher mais velha.
+*/
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+
+int main()
+{
+    int h1, h2, m1, m2, maiorH, menorH, maiorM, menorM;
+
+    printf("Digite a idade dos homem:\t");
+    scanf("%d %d", &h1, &h2);
+    printf("Digite a idade das mulheres:\t");
+    scanf("%d %d", &m1, &m2);
+
+    if ((h1 == h2) || (m1==m2))
+    {
+        printf("Erro! As idades devem ser diferentes\n");
+        exit(0);
+    }
+
+    if (h1>h2)
+    {
+        maiorH = h1;
+        menorH = h2;
+    }
+    else
+    {
+        maiorH = h2;
+        menorH = h1;
+    }
+
+    if (m1>m2)
+    {
+        maiorM = m1;
+        menorM = m2;
+    }
+    else
+    {
+        maiorM = m2;
+        menorM = m1;
+    }
+
+
+    printf("Soma (homem mais velho e mulher mais nova): %d\n", maiorH+menorM);
+    printf("Produto (homem mais novo e mulher mais velha): %d\n", maiorM*menorH);
+
+    return 0;
+
+}
+

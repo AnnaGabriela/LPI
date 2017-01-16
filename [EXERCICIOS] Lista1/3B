@@ -1,0 +1,38 @@
+//
+//  main.c
+//  Lista de Exercícios #1
+//
+//  Created by Anna on 06/09/15.
+//  Copyright (c) 2015 Anna Gabriela Carvalho. All rights reserved.
+//
+
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+    int idade, ano, mes;
+    setlocale(LC_ALL, "Portuguese");
+    printf("Digite a idade para descobrir o ano que nasceu.\n");
+    scanf ("%d", &idade);
+
+    ano = 2015 - idade;
+
+if (idade>120 || idade<0) {
+        printf("Erro! Digite uma idade real");
+        return 0;
+    }
+
+    printf("Digite o mês.\n");
+    scanf ("%d", &mes);
+
+    if (mes >= 9 && mes <= 12) {
+        ano = ano - 1;
+        printf ("Você nasceu em %d\n", ano);
+    }
+
+ else {
+        printf("Você nasceu em: ");
+        printf("%i", ano);
+ }
+        return 0;
+}

@@ -1,0 +1,2 @@
+# Projeto-LPI
+Jogo Reversi

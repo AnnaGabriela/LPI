@@ -1,0 +1,41 @@
+//
+//  main.c
+//  Lista de Exercícios #1
+//
+//  Created by Anna on 06/09/15.
+//  Copyright (c) 2015 Anna Gabriela Carvalho. All rights reserved.
+//
+
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+    int num, y = 0;
+    setlocale(LC_ALL, "Portuguese");
+    printf("Descubra o dia e o mês do n-ésimo dia de um ano não bissexto.\n");
+    scanf ("%d", &num);
+    
+    while (y==0) {
+        if (num<=0 || num>365) {
+            printf("Digite um número possível em um ano não bissexto (entre 1 e 365)\n");
+            scanf ("%d", &num);
+            y = 0;
+        }
+        else {
+            y = 1;
+            if (num>=1 && num<=31) printf("%d de Janeiro", num);
+            if (num>31 && num<=59) printf("%d de Fevereiro", num - 31);
+            if (num>59 && num<=90) printf("%d de Março", num - 59);
+            if (num>90 && num<=120) printf("%d de Abril", num - 90);
+            if (num>120 && num<=151) printf("%d de Maio", num - 120);
+            if (num>151 && num<=181) printf("%d de Junho", num - 151);
+            if (num>181 && num<=212) printf("%d de Julho", num - 181);
+            if (num>212 && num<=243) printf("%d de Agosto", num - 181);
+            if (num>243 && num<=273) printf("%d de Setembro", num - 243);
+            if (num>273 && num<=304) printf("%d de Outubro", num - 273);
+            if (num>304 && num<=334) printf("%d de Novembro", num - 304);
+            if (num>334 && num<=365) printf("%d de Dezembro", num - 334);
+            }
+    }
+
+}

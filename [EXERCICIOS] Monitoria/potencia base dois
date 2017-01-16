@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+    int potencia_base_dois (int n) {
+        if (n <= 0) {
+            printf ("valor invalido");
+            exit(10);
+        }
+
+        else if (n == 1) {
+        return 2;
+        }
+
+        else if (n > 1) {
+            return 2 * potencia_base_dois(n-1);
+        }
+
+    }
+
+    int main () {
+        int x,a;
+        printf ("digite um valor\n");
+        scanf ("%d", &x);
+        a = potencia_base_dois (x);
+        printf("2^%d = %d", x, a);
+
+
+    return 0;
+
+    }

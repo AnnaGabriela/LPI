@@ -1,0 +1,51 @@
+/*
+12. Escreva um programa que leia um número indeterminado de valores que representam raios de círculos. Para cada valor informado imprimir a área e seu perímetro. O programa será encerrado ao ser fornecido para o raio um valor negativo. Para obter o valor da área do círculo o programa deverá chamar a função AreaCirculo. Para obter o valor do seu perímetro o programa deverá chamar a função CompCircunferencia.
+Nome: AreaCirculo
+Descrição: Retorna a área do círculo. Entrada: float Raio
+Saída: (float) A área do círculo
+Nome: CompCircunferencia
+Descrição: Retorna o perímetro da circunferência. Entrada: float Raio
+Saída: (float) O comprimento da circunferência
+*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+float AreaCirculo (float raio)
+{
+    float result;
+    result = raio*3.14*3.14;
+    return result;
+}
+
+float CompCircunferencia (float raio)
+{
+    float result;
+    result = 2*raio*3.14;
+    return result;
+}
+
+float main ()
+{
+    float r;
+
+    do
+    {
+        printf("Digite o raio:\t");
+        scanf ("%f", &r);
+        if (r<0)
+        {
+            exit(-1);
+        }
+        else
+        {
+            AreaCirculo (r);
+            printf ("A area eh:\t%.2f\n", AreaCirculo(r));
+            CompCircunferencia (r);
+            printf ("O perimetro eh:\t%.2f\n", CompCircunferencia(r));
+        }
+    }
+    while (r>0);
+
+}

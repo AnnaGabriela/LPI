@@ -1,0 +1,37 @@
+// 4. Faça uma função MAX que recebe como entrada um inteiro n, cinco valores inteiros e imprime o inteiro k (maior valor) e qual a posição desse inteiro k dentre os cinco elementos.
+
+
+#include<stdio.h>
+#include<stdlib.h>
+
+void MAX (int n[])
+{
+    int k=n[0], i, posicao=0;
+
+    for (i=1; i<5; i++)
+    {
+        if (n[i] > k)
+        {
+            k = n [i];
+            posicao = i;
+        }
+    }
+
+    printf ("O maior valor eh:  %d\n", k);
+    printf ("A posicao dele eh:  %d\n", posicao+1);
+}
+
+int main ()
+{
+    int n [5], i;
+
+    for (i=0; i<5; i++)
+    {
+        printf("Digite o numero %d:\t", i+1);
+        scanf("%d" , &n[i]);
+    }
+
+    MAX (n);
+
+    return 0;
+}

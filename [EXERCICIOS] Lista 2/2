@@ -1,0 +1,45 @@
+
+// 2. Fazer um programa ler inteiros positivos com até 100 posições e imprimir quantas vezes aparecem os números 1, 6 e 7, nesta ordem. Sair do programa quando for digitado um número negativo.
+
+
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+
+    printf("Digite numeros:\n");
+    int vetor[100];
+    int i, cont=0,sequencia=0;
+
+    for (i=0; i<100; i++)
+    {
+        scanf("%d", &vetor[i]);
+        if(vetor[i]==1&&sequencia==0)
+        {
+            sequencia++;
+        }
+        else if(vetor[i]==6&&sequencia==1)
+        {
+            sequencia++;
+        }
+        else if(vetor[i]==7&&sequencia==2)
+        {
+            cont++;
+            sequencia=0;
+        }
+        if (vetor[i] < 0)
+        {
+            break;
+        }
+
+    }
+
+
+    printf("Quantidade que apareceu 1, 6 e 7 nesta ordem foi:  %d\n\n", cont);
+
+
+    return 0;
+
+}

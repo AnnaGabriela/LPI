@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void conferirVetor (int x)
+{
+    int i, num, s[x];
+    for (i=0; i<x; i++)
+    {
+        printf("Digite o %d elemento:\t", i+1);
+        scanf("%d", &s[i]);
+    }
+
+    printf("\nDigite um numero:\t");
+    scanf("%d", &num);
+
+    for (i=0; i<x; i++)
+    {
+
+        if (num == s[i])
+        {
+            printf("\nEsse numero pertece a sequencia\n\n");
+            exit(0);
+        }
+
+    }
+    printf("\nEsse numero nao pertece a sequencia\n\n");
+
+}
+
+int main()
+{
+
+    int x;
+
+    printf("Digite o tamanho do vetor:\t");
+    scanf("%d", &x);
+
+    printf("\n");
+
+    conferirVetor(x);
+
+    return 0;
+}
+

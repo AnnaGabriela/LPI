@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <locale.h>
+
+ void ordena (int a, int b, int c) {
+    if (a < b && a < c) {
+        if (b < c) printf ("%d,%d,%d", a, b, c);
+        if (c < b) printf("%d,%d,%d", a, c, b);
+    }
+    else if (b < a && b < c){
+        if (a < c) printf ("%d,%d,%d", b, a, c);
+        if (c < a) printf("%d,%d,%d", b, c, a);
+    }
+    else if (c < a && c < b){
+        if (a < b) printf ("%d,%d,%d", c, a, b);
+        if (b < a) printf("%d,%d,%d", c, b, a);
+    }
+ }
+
+int main() {
+    int a, b, c;
+    printf("digite 3 valores\n");
+    scanf ("%d, %d, %d" &a, &b, &c);
+    ordena (a,b,c);
+
+
+    return 0;
+}

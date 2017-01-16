@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main ()
+{
+    int vetor [5], i, k;
+    printf ("Digite 5 numeros\n");
+     for (i = 0; i < 5; i++)    {
+        scanf("%d", &vetor[i]);
+    }
+
+
+    k=vetor[0];
+    i=1;
+    while (i < 5)
+    {
+        if (vetor[i] > k)
+        {
+            k = vetor [i];
+        }
+        i++;
+    }
+    printf ("O maior valor eh: %d", k);
+
+    return 0;
+}

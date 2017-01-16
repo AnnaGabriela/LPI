@@ -1,0 +1,39 @@
+//
+//  main.c
+//  Lista de Exercícios #1
+//
+//  Created by Anna on 06/09/15.
+//  Copyright (c) 2015 Anna Gabriela Carvalho. All rights reserved.
+//
+
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+    int num, resto1, resto2, resto3, resto4;
+    setlocale(LC_ALL, "Portuguese");
+    printf("Descubra se o número é primo:\n");
+    scanf("%i", &num);
+    resto1 = num % 2;
+    resto2 = num % 3;
+    resto3 = num % 5;
+    resto4 = num % 7;
+
+        if (num == 1 || num == 0){
+            printf("Esse número não é primo :)");
+        }
+
+        else if (num == 2 || num == 3 || num == 5 || num == 7) {
+            printf("Esse número é primo :)");
+        }
+
+        else if (resto1 > 0 && resto2 > 0 && resto3 > 0 && resto4 > 0) {
+            printf("Esse número é primo :)");
+        }
+
+        else {
+            printf("Esse número não é primo :)");
+        }
+
+    return 0;
+}

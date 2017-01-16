@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main() {
+    
+    int s[5], i, num;
+    
+    for (i=0; i<5; i++){
+        printf("Digite o %d elemento:\t", i+1);
+        scanf("%d", &s[i]);
+    }
+    
+       printf("\nDigite um numero:\t");
+       scanf("%d", &num);
+    
+    
+    if (num == s[0] || num == s[1] || num == s[2] || num == s[3] || num == s[4]) {
+        printf("\nEsse numero pertece a sequencia\n\n");
+    }
+    
+    else {
+        printf("\nEsse numero nao pertece a sequencia\n\n");
+    }
+    
+
+    return 0;
+    
+}

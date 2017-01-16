@@ -1,0 +1,35 @@
+//
+//  main.c
+//  Lista de Exercícios #1
+//
+//  Created by Anna on 07/09/15.
+//  Copyright (c) 2015 Anna Gabriela Carvalho. All rights reserved.
+//
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "Portuguese");
+    int n, hora, minuto, segundo;
+    int i;
+    
+    printf("Digite uma quantidade de segundos para descobrir quantas horas e minutos se passaram depois da 00h.\n");
+    do {
+        scanf("%d", &n);
+        if(n < 0 || n > 9999)
+            printf("Erro! Número inválido. Digite valores possível para quantidade de segundos.\n");
+    }
+    while(n <0 || n>9999);
+    i = n * n;
+    hora = i/3600;
+    minuto = i%3600/60;
+    segundo = i%3600%60;
+    
+    printf("Resposta:\n%dh%dmin%ds", hora, minuto, segundo);
+    
+    return 0;
+}
+

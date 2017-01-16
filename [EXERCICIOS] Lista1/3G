@@ -1,0 +1,35 @@
+//
+//  main.c
+//  Lista de Exercícios #1
+//
+//  Created by Anna on 20/09/15.
+//  Copyright (c) 2015 Anna Gabriela Carvalho. All rights reserved.
+//
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int formaGeometrica(int parametro) {
+    int x,y;
+    for(y=1; y <= parametro; y++) {
+        for(x=1; x <= parametro; x++) {
+            if(((y == parametro) || (y+x == parametro) || (y==x)) && (y > parametro/2) ) {
+                printf("O");
+            } else {
+                printf(" ");
+            }
+        }
+        putchar('\n');
+    }
+    
+    return 0;
+    
+}
+
+int main() {
+    int base;
+    printf("digite o número");
+    scanf("%d", &base);
+    formaGeometrica(base);
+    return 0;
+}

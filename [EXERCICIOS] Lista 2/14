@@ -1,0 +1,29 @@
+// 14. Escreva um programa que lê uma frase e imprime essa frase em maiúsculas à medida que o usuário digita cada letra.
+
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+
+int main()
+{
+    char entrada;
+
+    do
+    {
+        entrada=getch();
+        if (entrada >= 'a' && entrada <= 'z')
+        {
+           putchar(entrada - 32);
+        }
+        else
+        {
+            putchar (entrada);
+        }
+    } while (entrada != '.');
+
+
+
+    return 0;
+
+}

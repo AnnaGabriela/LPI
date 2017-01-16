@@ -1,0 +1,34 @@
+// 1. Dado um número inteiro positivo n, determinar todos os inteiros entre 1 e n que são comprimento da hipotenusa de um triângulo retângulo com catetos inteiros.
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+void hipotenusa (int n)
+{
+  int h, c1, c2, helper=0;
+  
+  for (h=1; h<=n; h++) {
+    for (c1=1; c1<h; c1++) {
+      for (c2=1; c2<=n; c2++) {
+        if (h*h==(c1*c1) + (c2*c2)) {
+          if (helper!=h) {
+            helper = h;
+            printf ("%d\n", h);
+            }
+          }
+        }
+      }
+    }
+  }
+  
+int main () 
+{
+  int x;
+  printf ("Digite um numero: ");
+  scanf("%d", &x);
+  hipotenusa(x);
+  
+  return 0;
+}

@@ -1,0 +1,32 @@
+//
+//  main.c
+//  Lista de Exercícios #1
+//
+//  Created by Anna on 07/09/15.
+//  Copyright (c) 2015 Anna Gabriela Carvalho. All rights reserved.
+//
+
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "Portuguese");
+    int n, raiz, resultado;
+    printf("Digite um número para descobrir o maior inteiro menor que sua raiz quadrada.\n");
+    scanf("%d", &n);
+    
+    if (n<=0) {
+        printf("Erro! Digite um valor possível.");
+    }
+    
+    else {
+        raiz = sqrt(n);
+        resultado = raiz - 1;
+        printf("Resultado é: %d", resultado);
+    }
+    
+    return 0;
+}
+

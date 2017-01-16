@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (){
+    int espaco, estrela,i,j;
+    printf ("digite um valor\n");
+    scanf ("%d", &espaco);
+    for(i=0;i<espaco;i++){
+        for(j=0;j<espaco;j++){
+           if( i == j || i + j == (espaco-1)){
+                putchar('*');
+           }
+           else {
+                putchar(' ');
+
+           }
+        }
+        printf("\n");
+    }
+
+    return 0;*
+
+}

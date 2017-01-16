@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+    void  tabuada (int n) {
+        int x, z;
+        for (z=1; z <= 10; z++) {
+            x = n * z;
+            printf("%i x %i = %i\n", n, z, x);
+
+        }
+    }
+    int main () {
+        int a;
+        printf ("digite um valor\n");
+        scanf ("%d", &a);
+        tabuada (a);
+
+    return 0;
+
+    }

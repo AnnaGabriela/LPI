@@ -1,0 +1,63 @@
+1. Responda as perguntas abaixo. Se achar necessário, faça testes no
+programa em C, sendo p um ponteiro.
+a) Explique a diferença entre
+ p++;            (*p)++;           *(p++);
+
+p++ = incremento de p
+(*p)++ = incremento do valor apontado por p
+*(p++) = aponta o valor de p incrementado
+
+
+b) O que quer dizer *(p+10);?
+
+aponta para o valor de p + 10
+
+
+2. Qual o valor de y no final do programa? Tente primeiro descobrir e
+depois verifique no computador o resultado. A seguir, escreva um  /*
+comentário */ em cada comando de atribuição explicando o que ele
+faz e o valor da variável à esquerda do '=' após sua execução.
+
+int main()*
+{
+       int y, *py, x;
+       y = 0;
+       py = &y; 	// py armazena o endereco de y
+       x = *py;		// x eh igual ao valor apontado por py
+       x = 4;
+       (*py)++;		// o valor apontado por py sofre incremento
+       x­­;
+       (*py) += x;	// o valor do endereco apontado por py eh igual a esse valor mais x
+       printf ("y = %d\n", y);
+       return(0);
+}
+
+
+y = 4
+
+
+
+3. Explique o que faz o programa abaixo
+
+main(){
+      float vet[5] = {1.1,2.2,3.3,4.4,5.5};
+      float *f;
+      int i;
+      f = vet;
+      printf("contador/valor/valor/endereco/endereco");
+      for(i = 0 ; i <= 4 ; i++){
+            printf("\ni = %d",i);
+            printf("   vet[%d] = %.1f",i, vet[i]);
+            printf("   *(f + %d) = %.1f",i, *(f+i));
+            printf("   &vet[%d] = %X",i, &vet[i]);
+            printf("   (f + %d) = %X",i, f+i);
+}
+
+
+4. Assumindo que M1[] é um vetor do tipo int, quais das seguintes
+expressões referenciam o valor do terceiro elemento de M1?
+
+a) *(M1 + 2)   <----     
+b) *(M1 + 4)        
+c) M1 + 4                       
+d) M1 + 2  <----    

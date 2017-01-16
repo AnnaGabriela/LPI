@@ -1,0 +1,22 @@
+/*
+7. Modifique o código abaixo, substituindo o comando while por um outro tipo adequado de repetição e removendo comandos desnecessários.
+char _escolha;
+unsigned short vencedor;
+printf("MENU\n\t 1. Jogar 3x3x3\n\t 2. Jogar 4x4x4\n\t 3. Jogar 5x5x5\n\n"); printf("ESCOLHA UMA OPÇÃO: ");
+_ escolha = getch();
+while ((_escolha != '1') && (_escolha != '2') && (_escolha != '3')) {
+printf("ESCOLHA UMA OPÇÃO: ");
+_ escolha = getch(); }
+*/
+
+
+    char _escolha;
+    unsigned short vencedor;
+    printf("MENU\n\t 1. Jogar 3x3x3\n\t 2. Jogar 4x4x4\n\t 3. Jogar 5x5x5\n\n");
+    printf("ESCOLHA UMA OPÇÃO: ");
+    _escolha = getch();
+    for (; _escolha > 3 || _escolha < 1;)
+    {
+        printf("ESCOLHA UMA OPÇÃO: ");
+        _escolha = getch();
+    }

@@ -1,0 +1,19 @@
+//
+//  main.c
+//  Lista de Exercícios #1
+//
+//  Created by Anna on 20/09/15.
+//  Copyright (c) 2015 Anna Gabriela Carvalho. All rights reserved.
+//
+
+#include<stdio.h>
+#include<stdlib.h>
+
+void main() {
+    
+    int n;
+    printf("Digite o número para imprimir em hexadecimal\n");
+    scanf("%d", &n);
+    printf("%x\n", n);
+    
+}

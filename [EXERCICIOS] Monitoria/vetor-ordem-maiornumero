@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    int vetor[5];
+    int x, i, i2, menor, menor_pos, aux;
+
+/* x = variável do maior valor
+   i = local no arranjo
+   i2 = 2 local no arranjo
+   menor = menor valor
+   menor_pos = local do menor valor no arranjo
+   aux 
+ */
+    
+    printf ("Digite 5 numeros:\n");
+    
+    
+    for (i = 0; i < 5; i++)    {
+        scanf("%d", &vetor[i]);
+    }
+    
+i = 1;
+    
+    for (i=0; i<5; i++) {
+        
+        menor_pos = vetor [i];
+        menor = i;
+        
+        for (i2 = i+1; i2<5; i2++) {
+            if (vetor [i2] < menor) {
+                menor = vetor [i2];
+                menor_pos = i2;
+            }
+        }
+        
+        if ( menor_pos != i ) {
+            aux = vetor [i];
+            vetor [i] = vetor [menor_pos];
+            vetor [menor_pos] = aux;
+        }
+    }
+    
+        printf ("\nOrdenado:\t");
+        int j;
+        for (j=0; j<5; j++){
+            printf ("%d\t", vetor[j]);
+        }
+    
+    x = vetor[0];
+    
+    
+    while (i < 5)
+    {
+        if (vetor[i] > x)
+        {
+            x = vetor[i];
+        }
+        i++;
+    }
+    
+
+    printf("\n\nO maior numero que voce digitou foi:  %d.\n" , x);
+    return 0;
+}
